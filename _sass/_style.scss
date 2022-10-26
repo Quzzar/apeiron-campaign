@@ -1,11 +1,19 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
+$color-primary: #DEE2E6;
+$color-text: #ADB5BD;
+$color-subtext: #868E96;
+$color-border: #868E96;
+$hover-background: #030a1c;
+$color-box-background: #020714;
 $border-radius: 4px;
-$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font-family: 'Comfortaa', cursive;
+
+html {
+
+  background-image: url("/assets/background.svg");
+  background-color: #000;
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
 
 body {
   box-sizing: content-box;
@@ -23,6 +31,24 @@ body {
   }
 }
 
+body::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #030a1c;
+  -webkit-box-shadow: inset 0 0 6px #030a1c;
+  background-color: #030a1c;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+  outline: 1px solid #030a1c;
+}
+body::-webkit-scrollbar-corner {
+  background-color: #030a1c;
+}
+
+
 time {
   display: block;
   color: $color-subtext;
@@ -32,7 +58,7 @@ time {
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: mix($color-text, white, 80%);
+  color: mix($color-text, black, 80%);
   padding-top: 1em;
 }
 
@@ -81,10 +107,7 @@ a {
   text-decoration: none;
   border-bottom: 1px solid $color-border;
   color: $color-primary;
-  &:hover {
-    color: black !important;
-    background: #fffaf1;
-  }
+
   &:after {
     position: relative;
     top: -0.5em;
@@ -92,6 +115,7 @@ a {
     content: "↗";
     color: #aaaaaa;
   }
+
   &.internal-link:after,
   &.footnote:after,
   &.reversefootnote:after {
@@ -100,8 +124,8 @@ a {
 }
 
 *:focus {
-  background: #ffe8bc !important;
-  color: black !important;
+  background: $hover-background !important;
+  color: white !important;
 }
 
 nav {
@@ -128,15 +152,13 @@ nav {
 }
 
 code {
-  background: #f5f5f5;
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
 
 .invalid-link {
-  color: #444444;
+  color: white;
   cursor: help;
-  background: #fafafa;
   padding: 0 0.1em;
 }
 

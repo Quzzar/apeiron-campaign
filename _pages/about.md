@@ -4,6 +4,6 @@ title: About
 permalink: /about
 ---
 
-*This is an about page.*
+### Unused page!
 
-Feel free to tell the world about what you love! 😍
+
